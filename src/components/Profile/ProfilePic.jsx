@@ -1,4 +1,4 @@
-import axiosInstance from "../../api/axios"
+import axios from "../../api/axios"
 import React, { useContext, useRef, useState, useEffect } from "react";
 import { taskContext } from "../../App";
 import { X } from "lucide-react";
