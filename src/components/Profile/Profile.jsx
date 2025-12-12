@@ -1,4 +1,4 @@
-import axiosInstance from "../../api/axios"
+import axios from "../../api/axios"
 import React, { useContext, useState, useEffect } from "react";
 import { toast } from "react-toastify";
 import { taskContext } from "../../App";
