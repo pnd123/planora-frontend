@@ -61,7 +61,7 @@ function Profile() {
       return;
     }
     try {
-      const response = await axios.put(url + "/api/user/updateProfile", data, {
+      const response = await axios.put("/api/user/updateProfile", data, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -108,7 +108,7 @@ function Profile() {
     const getUserDetails = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.get(url + "/api/user/myDetails", {
+        const response = await axios.get("/api/user/myDetails", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -286,25 +286,6 @@ function Profile() {
           </form>
         </div>
       </div>
-
-      {/* <form onSubmit={handleImageUpload}>
-        <input
-          type="file"
-          name=""
-          id=""
-          capture="user"
-          accept="image/*"
-          className="bg-yellow-300"
-          onChange={(e) => setFile(e.target.files[0])}
-        />
-        <button
-          type="submit"
-          className="border rounded-md px-2 cursor-pointer"
-          disabled={loading}
-        >
-          {loading ? "...uploading" : "Upload image"}
-        </button>
-      </form> */}
     </div>
   );
 }
